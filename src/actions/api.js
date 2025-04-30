@@ -191,7 +191,48 @@ const API = {
       const data = await makeGetRequest(`${BASE_URL}/api/vendor/get/${userId}`);
 
       if (data) {
+        console.log('data===>', data);
         return data;
+      }
+    } catch (error) {
+      return error.response;
+    }
+  },
+
+
+  // My code
+  async getAllProducts(page = 1, limit = 10) {
+    try {
+      const data = await makeGetRequest(`${BASE_URL}/product?page=${page}&limit=${limit}`);
+
+      if (data) {
+        console.log("data===>",data)
+        return data;
+      }
+    } catch (error) {
+      return error.response;
+    }
+  },
+
+  async getAllCategory() {
+    try {
+      const data = await makeGetRequest(`${BASE_URL}/category`);
+
+      if (data) {
+        console.log("data===>",data)
+        return data;
+      }
+    } catch (error) {
+      return error.response;
+    }
+  },
+
+  async getAllImages() {
+    try {
+      const data = await makePostRequest(`${BASE_URL}/image/${imageId}`);
+
+      if (data) {
+         return data;
       }
     } catch (error) {
       return error.response;
@@ -200,3 +241,6 @@ const API = {
 };
 
 export default API;
+
+
+

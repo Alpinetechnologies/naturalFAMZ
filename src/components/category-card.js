@@ -10,17 +10,31 @@ import React from 'react';
 import {COLORS} from '../constants/colors';
 import {FONT_FAMILY} from '../constants/font-family';
 import {useNavigation} from '@react-navigation/native';
+import API from '../actions/api';
 const {width} = Dimensions.get('window');
 export default function CategoryCard({item}) {
   const navigation = useNavigation();
+const[imageUrl, setImageUrl]=React.useState(null);
+
+const getImages = () => {
+  if (item.image) {
+    const url = `https://multi-vendor-jul2.onrender.com/api/v1/image/${item.image}`;
+    setImageUrl(url);
+  } else {
+    setImageUrl('https://5.imimg.com/data5/ZO/FD/KR/SELLER-13640528/bombay-sooji-500x500.jpg');
+  }
+};
+  React.useEffect(() => {
+    getImages();
+  }, [item.image]);
   return (
     <TouchableOpacity
       style={style.cardcontainer}
       onPress={() => navigation.navigate('ProductSubCategory')}>
       <View style={style.card}>
-        <Image source={{uri: item.image}} style={{height: 68, width: 51}} />
+        <Image source={{uri: imageUrl}} style={{height: 68, width: 51}} />
       </View>
-      <Text style={style.title}>{item.productname}</Text>
+      <Text style={style.title}>{item.name}</Text>
     </TouchableOpacity>
   );
 }

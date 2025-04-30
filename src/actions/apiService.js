@@ -16,29 +16,69 @@ import {
   constructDeleteRequestOptions,
 } from './serviceUtils';
 
-export const makeGetRequest = async url => {
+// export const makeGetRequest = async url => {
+//   try {
+//     if (!url) {
+//       throw new Error('No URL');
+//     }
+//     console.log('make GET Final request = ' + url);
+//     let controller = new AbortController();
+//     setTimeout(() => controller.abort(), GET_REQUEST_TIMEOUT);
+//     const response = await fetch(
+//       url,
+//       {signal: controller.signal},
+//       constructGetRequestOptions(),
+//     );
+
+//     const json = await response.json();
+
+//     //console.log(json);
+
+//     if (json.error === RESPONSE_SUCCESS || json.error === RESPONSE_FAILURE) {
+//       return json;
+//     } else return constructFailureResponse(json.message);
+//   } catch (error) {
+//     //  console.log(error.message);
+//     if (
+//       error.message === ABORT_ERROR_MESSAGE ||
+//       error.message === NETWORK_REQUEST_FAILED
+//     ) {
+//       return constructNetworkErrorResponse();
+//     }
+//     return constructFailureResponse();
+//   }
+// };
+
+
+
+
+export const makeGetRequest = async (url) => {
   try {
-    if (!url) {
-      throw new Error('No URL');
-    }
+    if (!url) throw new Error('No URL');
+
     console.log('make GET Final request = ' + url);
-    let controller = new AbortController();
+
+    const token = await AsyncStorage.getItem('accessToken');  
+    const controller = new AbortController();
     setTimeout(() => controller.abort(), GET_REQUEST_TIMEOUT);
-    const response = await fetch(
-      url,
-      {signal: controller.signal},
-      constructGetRequestOptions(),
-    );
+
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      signal: controller.signal,
+    });
 
     const json = await response.json();
 
-    //console.log(json);
-
-    if (json.error === RESPONSE_SUCCESS || json.error === RESPONSE_FAILURE) {
+    if (json.success === true || json.error === false) {
       return json;
-    } else return constructFailureResponse(json.message);
+    }
+    return constructFailureResponse(json.message || "Something went wrong");
   } catch (error) {
-    //  console.log(error.message);
     if (
       error.message === ABORT_ERROR_MESSAGE ||
       error.message === NETWORK_REQUEST_FAILED

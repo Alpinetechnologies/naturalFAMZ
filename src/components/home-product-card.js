@@ -3,7 +3,8 @@ import React from 'react';
 import {COLORS} from '../constants/colors';
 import {FONT_FAMILY} from '../constants/font-family';
 
-export default function HomeProductCard() {
+export default function HomeProductCard(props) {
+   const DATA= props?.data;
   return (
     <TouchableOpacity style={styles.card}>
       <View style={styles.imgContainer}>
@@ -15,7 +16,7 @@ export default function HomeProductCard() {
         />
       </View>
       <View>
-        <Text style={styles.brandname}>Natural Farmz Organic</Text>
+        <Text style={styles.brandname}>{DATA?.name}</Text>
         <Text style={styles.itemname}>Chana Dal</Text>
         <Text style={styles.salerate}>
           ₹120/-{' '}

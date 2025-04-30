@@ -1,0 +1,176 @@
+{
+    "success": true,
+    "data": [
+        {
+            "id": "68111a46c916dddc014e5af8",
+            "createdAt": "2025-04-29T18:28:22.099Z",
+            "updatedAt": "2025-04-29T18:30:33.163Z",
+            "name": "Organic Honey",
+            "description": "Pure, unprocessed organic honey sourced from the foothills of the Himalayas. Natural sweetener with health benefits.",
+            "ingredients": "100% Pure Organic Honey",
+            "hsnCode": "0409",
+            "gstRate": 5,
+            "metaTitle": "Organic Himalayan Honey | Natural Sweetener",
+            "metaKeywords": "organic honey, himalayan honey, natural sweetener, pure honey",
+            "metaDescription": "Premium-quality organic honey harvested from the pristine Himalayan foothills. 100% pure, unprocessed and rich in antioxidants.",
+            "quantity": 500,
+            "deliveryScope": "PAN_INDIA",
+            "deliveryStates": [
+                "Maharashtra",
+                "Gujarat",
+                "Delhi",
+                "Karnataka"
+            ],
+            "productType": "NON_PERISHABLE",
+            "organicCertificate": "ORG-CERT-2023-12345",
+            "certificateValidity": "2025-12-31T00:00:00.000Z",
+            "fssaiNumber": "10023456789012",
+            "fssaiValidity": "2026-06-30T00:00:00.000Z",
+            "length": 8.5,
+            "breadth": 6.2,
+            "height": 12.8,
+            "weight": 0.55,
+            "vendorId": "681119431bed70654841edbe",
+            "subCategoryId": "6810ca0a2b0ed1a5a129bfb3",
+            "vendor": {
+                "companyName": "Green Harvest Organics",
+                "ownerName": "Rajesh Kumar"
+            },
+            "subCategory": {
+                "id": "6810ca0a2b0ed1a5a129bfb3",
+                "name": "Mobile phone",
+                "imageId": "",
+                "createdAt": "2025-04-29T12:46:02.588Z",
+                "updatedAt": "2025-04-29T12:46:02.588Z",
+                "categoryId": "6810c8f2f9e504b6280bf457",
+                "category": {
+                    "id": "6810c8f2f9e504b6280bf457",
+                    "name": "Electronics",
+                    "imageId": "",
+                    "createdAt": "2025-04-29T12:41:22.441Z",
+                    "updatedAt": "2025-04-29T12:41:22.441Z"
+                }
+            },
+            "images": [
+                {
+                    "id": "68111acb519162c103118b68",
+                    "imageId": "6806fe6f147249a6e1ce2818",
+                    "isFeatured": false,
+                    "createdAt": "2025-04-29T18:30:35.014Z",
+                    "productId": "68111a46c916dddc014e5af8"
+                },
+                {
+                    "id": "68111acb519162c103118b67",
+                    "imageId": "6806fe6f147249a6e1ce2818",
+                    "isFeatured": false,
+                    "createdAt": "2025-04-29T18:30:35.014Z",
+                    "productId": "68111a46c916dddc014e5af8"
+                }
+            ]
+        }
+    ],
+    "pagination": {
+        "total": 1,
+        "page": 1,
+        "limit": 8,
+        "pages": 1
+    }
+}
+// CATEGORY LIST
+
+LOG  categoryList ============: [
+    {
+        "createdAt": "2025-04-29T12:41:22.441Z",
+        "id": "6810c8f2f9e504b6280bf457",
+        "imageId": "",
+        "name": "Electronics",
+        "subCategories": [
+            [Object
+            ],
+            [Object
+            ]
+        ],
+        "updatedAt": "2025-04-29T12:41:22.441Z"
+    },
+    {
+        "createdAt": "2025-04-29T12:42:47.615Z",
+        "id": "6810c9492b0ed1a5a129bfb1",
+        "imageId": "",
+        "name": "Mobile phone",
+        "subCategories": [],
+        "updatedAt": "2025-04-29T12:42:47.615Z"
+    },
+    {
+        "createdAt": "2025-04-29T16:54:27.342Z",
+        "id": "681104433bb9f60f5a85825d",
+        "imageId": "6811043f3bb9f60f5a85825b",
+        "name": "Automobile",
+        "subCategories": [
+            [Object
+            ]
+        ],
+        "updatedAt": "2025-04-29T16:54:27.342Z"
+    },
+    {
+        "createdAt": "2025-04-29T16:54:29.620Z",
+        "id": "681104453bb9f60f5a85825e",
+        "imageId": "681104423bb9f60f5a85825c",
+        "name": "Automobile",
+        "subCategories": [],
+        "updatedAt": "2025-04-29T16:54:29.620Z"
+    },
+    {
+        "createdAt": "2025-04-29T16:57:20.268Z",
+        "id": "681104f03bb9f60f5a858260",
+        "imageId": "681104ec3bb9f60f5a85825f",
+        "name": "Demo",
+        "subCategories": [],
+        "updatedAt": "2025-04-29T16:57:20.268Z"
+    },
+    {
+        "createdAt": "2025-04-29T16:58:30.765Z",
+        "id": "681105363bb9f60f5a858262",
+        "imageId": "681105323bb9f60f5a858261",
+        "name": "IDK",
+        "subCategories": [],
+        "updatedAt": "2025-04-29T16:58:30.765Z"
+    },
+    {
+        "createdAt": "2025-04-29T17:18:53.687Z",
+        "id": "681109fd3bb9f60f5a858264",
+        "imageId": "681109fc3bb9f60f5a858263",
+        "name": "IDK",
+        "subCategories": [],
+        "updatedAt": "2025-04-29T17:18:53.687Z"
+    },
+    {
+        "createdAt": "2025-04-29T17:54:37.940Z",
+        "id": "6811125d51d4d0a4add61321",
+        "imageId": "6811125c51d4d0a4add61320",
+        "name": "zeeshan",
+        "subCategories": [],
+        "updatedAt": "2025-04-29T17:54:37.940Z"
+    },
+    {
+        "createdAt": "2025-04-30T11:11:10.570Z",
+        "id": "6812054e3e51feb652a9fb44",
+        "imageId": "6812054c3e51feb652a9fb43",
+        "name": "test Category",
+        "subCategories": [
+            [Object
+            ]
+        ],
+        "updatedAt": "2025-04-30T11:11:10.570Z"
+    },
+    {
+        "createdAt": "2025-04-30T13:24:28.737Z",
+        "id": "6812248c3e51feb652a9fb48",
+        "imageId": "6812248b3e51feb652a9fb47",
+        "name": "fruit",
+        "subCategories": [
+            [Object
+            ]
+        ],
+        "updatedAt": "2025-04-30T13:24:28.737Z"
+    }
+]
